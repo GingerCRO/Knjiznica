@@ -46,18 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forme\Glavna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forme\Glavna.Designer.cs">
+      <DependentUpon>Glavna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Knjiga.cs" />
-    <Compile Include="PodatkovniKontekst.cs" />
-    <Compile Include="Posudba.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Forme\UDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UDetalji.Designer.cs">
+      <DependentUpon>UDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\Knjiga.cs" />
+    <Compile Include="Klase\PodatkovniKontekst.cs" />
+    <Compile Include="Klase\Posudba.cs" />
+    <Compile Include="Klase\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ucenik.cs" />
+    <Compile Include="Forme\Ucenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Ucenici.Designer.cs">
+      <DependentUpon>Ucenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\Ucenik.cs" />
+    <EmbeddedResource Include="Forme\Glavna.resx">
+      <DependentUpon>Glavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UDetalji.resx">
+      <DependentUpon>UDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -67,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forme\Ucenici.resx">
+      <DependentUpon>Ucenici.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,5 +101,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

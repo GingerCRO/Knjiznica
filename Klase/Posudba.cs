@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Knjiznica
 {
-    public class Posudba
+    public class Posudba : IComparable<Posudba>
     {
 
         public Ucenik Ucenik { get; set; }
@@ -25,6 +25,13 @@ namespace Knjiznica
         public override string ToString()
         {
             return DatumPosudbe.ToShortDateString() + " - " + DatumVracanja.ToShortDateString();
+        }
+
+        public int CompareTo(Posudba other)
+        {
+
+            return DatumVracanja.CompareTo(other.DatumVracanja);
+
         }
 
     }
