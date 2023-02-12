@@ -52,6 +52,18 @@
     <Compile Include="Forme\Glavna.Designer.cs">
       <DependentUpon>Glavna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\KDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KDetalji.Designer.cs">
+      <DependentUpon>KDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Knjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Knjige.Designer.cs">
+      <DependentUpon>Knjige.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\UDetalji.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="Klase\Ucenik.cs" />
     <EmbeddedResource Include="Forme\Glavna.resx">
       <DependentUpon>Glavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KDetalji.resx">
+      <DependentUpon>KDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Knjige.resx">
+      <DependentUpon>Knjige.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\UDetalji.resx">
       <DependentUpon>UDetalji.cs</DependentUpon>

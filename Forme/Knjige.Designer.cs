@@ -1,6 +1,6 @@
-﻿namespace Knjiznica
+﻿namespace Knjiznica.Forme
 {
-    partial class Ucenici
+    partial class Knjige
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lbUcenici = new System.Windows.Forms.ListBox();
+            this.lbKnjige = new System.Windows.Forms.ListBox();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnBrisi = new System.Windows.Forms.Button();
@@ -38,24 +38,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 24);
+            this.label1.Location = new System.Drawing.Point(27, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Učenici";
+            this.label1.Text = "Knjige";
             // 
-            // lbUcenici
+            // lbKnjige
             // 
-            this.lbUcenici.FormattingEnabled = true;
-            this.lbUcenici.Location = new System.Drawing.Point(33, 55);
-            this.lbUcenici.Name = "lbUcenici";
-            this.lbUcenici.Size = new System.Drawing.Size(604, 368);
-            this.lbUcenici.TabIndex = 1;
+            this.lbKnjige.FormattingEnabled = true;
+            this.lbKnjige.Location = new System.Drawing.Point(30, 55);
+            this.lbKnjige.Name = "lbKnjige";
+            this.lbKnjige.Size = new System.Drawing.Size(610, 368);
+            this.lbKnjige.TabIndex = 1;
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(683, 69);
+            this.btnDodaj.Location = new System.Drawing.Point(683, 67);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(75, 23);
             this.btnDodaj.TabIndex = 2;
@@ -65,7 +64,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(683, 124);
+            this.btnUredi.Location = new System.Drawing.Point(683, 120);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(75, 23);
             this.btnUredi.TabIndex = 3;
@@ -75,7 +74,7 @@
             // 
             // btnBrisi
             // 
-            this.btnBrisi.Location = new System.Drawing.Point(683, 182);
+            this.btnBrisi.Location = new System.Drawing.Point(683, 172);
             this.btnBrisi.Name = "btnBrisi";
             this.btnBrisi.Size = new System.Drawing.Size(75, 23);
             this.btnBrisi.TabIndex = 4;
@@ -83,7 +82,7 @@
             this.btnBrisi.UseVisualStyleBackColor = true;
             this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
-            // Ucenici
+            // Knjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,11 +90,11 @@
             this.Controls.Add(this.btnBrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
-            this.Controls.Add(this.lbUcenici);
+            this.Controls.Add(this.lbKnjige);
             this.Controls.Add(this.label1);
-            this.Name = "Ucenici";
-            this.Text = "Ucenici";
-            this.Load += new System.EventHandler(this.Ucenici_Load);
+            this.Name = "Knjige";
+            this.Text = "Knjige";
+            this.Load += new System.EventHandler(this.Knjige_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lbUcenici;
+        private System.Windows.Forms.ListBox lbKnjige;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.Button btnBrisi;

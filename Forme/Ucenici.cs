@@ -73,7 +73,6 @@ namespace Knjiznica
         private void btnDodaj_Click(object sender, EventArgs e)
         {
 
-
             UDetalji frmDetalji = new UDetalji(); 
 
             if (frmDetalji.ShowDialog() == DialogResult.OK)
@@ -87,7 +86,6 @@ namespace Knjiznica
 
         private void btnUredi_Click(object sender, EventArgs e)
         {
-
 
             if (lbUcenici.SelectedIndex < 0)
             {

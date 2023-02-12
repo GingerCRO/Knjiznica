@@ -137,13 +137,13 @@ namespace Knjiznica
         }
 
         public void SpremiPosudbe()
-        {
+        {            
 
             using (StreamWriter sw = new StreamWriter(datPosudbe))
             {
                 foreach (Posudba p in posudbe)
                 {
-
+                    
                 }
             }
 
@@ -152,6 +152,11 @@ namespace Knjiznica
         public void BrisiUcenika(Ucenik u)
         {
             ucenici.Remove(u);
+        }
+
+        public void BrisiKnjigu(Knjiga k)
+        {
+            knjige.Remove(k);
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Knjiznica.Forme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,15 @@ namespace Knjiznica
             Ucenici frmUcenici = new Ucenici(kontekst);
 
             frmUcenici.ShowDialog();
+
+        }
+
+        private void knjigeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Knjige frmKnjige = new Knjige(kontekst);
+
+            frmKnjige.ShowDialog();
 
         }
     }
