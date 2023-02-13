@@ -24,15 +24,6 @@ namespace Knjiznica.Forme
         private void Knjige_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                kontekst = new PodatkovniKontekst();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
             DataRefresh();
 
         }

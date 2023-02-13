@@ -25,15 +25,6 @@ namespace Knjiznica
         private void Ucenici_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                kontekst = new PodatkovniKontekst();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
             DataRefresh();
 
         }

@@ -67,5 +67,55 @@ namespace Knjiznica
             frmKnjige.ShowDialog();
 
         }
+
+        private void btnVrati_Click(object sender, EventArgs e)
+        {
+
+            if (lbPosudbe.SelectedIndex < 0)
+            {
+                MessageBox.Show("Niste odabrali posudbu");
+            }
+            else
+            {
+                kontekst.BrisiPosudbu((Posudba)lbPosudbe.SelectedItem);
+
+                DataRefresh(); 
+            }
+
+        }
+
+        private void btnPosudi_Click(object sender, EventArgs e)
+        {
+
+            PDetalji pDetalji = new PDetalji(kontekst);
+
+            if (pDetalji.ShowDialog() == DialogResult.OK)
+            {
+                kontekst.Posudbe.Add(pDetalji.posudba);
+                DataRefresh();
+            }
+
+        }
+
+        private void btnIzmijeni_Click(object sender, EventArgs e)
+        {
+
+            if (lbPosudbe.SelectedIndex < 0)
+            {
+                MessageBox.Show("Odaberi posudbu");
+            }
+            else
+            {
+                PDetalji pDetalji = new PDetalji(kontekst);
+
+                pDetalji.posudba = (Posudba)lbPosudbe.SelectedItem;
+
+                if (pDetalji.ShowDialog() == DialogResult.OK)
+                {
+                    DataRefresh();
+                }
+            }
+
+        }
     }
 }

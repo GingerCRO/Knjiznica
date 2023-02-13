@@ -89,6 +89,7 @@
             this.btnPosudi.TabIndex = 3;
             this.btnPosudi.Text = "Posudi";
             this.btnPosudi.UseVisualStyleBackColor = true;
+            this.btnPosudi.Click += new System.EventHandler(this.btnPosudi_Click);
             // 
             // btnIzmijeni
             // 
@@ -98,6 +99,7 @@
             this.btnIzmijeni.TabIndex = 4;
             this.btnIzmijeni.Text = "Izmijeni";
             this.btnIzmijeni.UseVisualStyleBackColor = true;
+            this.btnIzmijeni.Click += new System.EventHandler(this.btnIzmijeni_Click);
             // 
             // btnVrati
             // 
@@ -107,6 +109,7 @@
             this.btnVrati.TabIndex = 5;
             this.btnVrati.Text = "Vrati";
             this.btnVrati.UseVisualStyleBackColor = true;
+            this.btnVrati.Click += new System.EventHandler(this.btnVrati_Click);
             // 
             // Glavna
             // 

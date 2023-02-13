@@ -38,9 +38,9 @@ namespace Knjiznica
 
         }
 
-        private string datUcenici = @"D:\Skola_4e\NOP\Knjiznica\datUcenici.txt";
-        private string datKnjige = @"D:\Skola_4e\NOP\Knjiznica\datKnjige.txt";
-        private string datPosudbe = @"D:\Skola_4e\NOP\Knjiznica\datPosudbe.txt";
+        private string datUcenici = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datUcenici.txt";
+        private string datKnjige = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datKnjige.txt";
+        private string datPosudbe = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datPosudbe.txt";
 
         private List<Ucenik> UcitajUcenike()
         {
@@ -103,8 +103,47 @@ namespace Knjiznica
 
         }
 
+        
         public List<Posudba> UcitajPosudbe()
         {
+
+            List<Posudba> posudbe = new List<Posudba>();
+
+            if (File.Exists(datPosudbe))
+            {
+                using (StreamReader sr = new StreamReader(datPosudbe))
+                {
+
+                    while (!sr.EndOfStream)
+                    {
+
+                        string line = sr.ReadLine();
+                        string[] polja = line.Split('|');
+
+                        Posudba p = new Posudba();
+
+                        p.Ucenik = Ucenici.Find(
+                            delegate (Ucenik u)
+                            {
+                                return u.OIB == polja[0];
+                            }
+                            );
+
+                        p.Knjiga = Knjige.Find(
+                            delegate (Knjiga k)
+                            {
+                                return k.ISBN == polja[1];
+                            }
+                            );
+
+                        p.DatumPosudbe = DateTime.Parse(polja[2]);
+                        p.BrojDana = int.Parse(polja[3]);
+
+                        posudbe.Add(p);
+
+                    }
+                }
+            }
 
             return posudbe;
 
@@ -143,7 +182,7 @@ namespace Knjiznica
             {
                 foreach (Posudba p in posudbe)
                 {
-                    
+                    sw.WriteLine("{0}|{1}|{2}|{3}", p.Ucenik.OIB, p.Knjiga.ISBN, p.DatumPosudbe.ToShortDateString(), p.BrojDana);
                 }
             }
 
@@ -157,6 +196,11 @@ namespace Knjiznica
         public void BrisiKnjigu(Knjiga k)
         {
             knjige.Remove(k);
+        }
+
+        public void BrisiPosudbu(Posudba p)
+        {
+            posudbe.Remove(p);
         }
 
     }
