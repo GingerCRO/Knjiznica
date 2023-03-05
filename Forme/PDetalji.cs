@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Knjiznica.Forme
@@ -58,18 +51,27 @@ namespace Knjiznica.Forme
         private void btnOK_Click(object sender, EventArgs e)
         {
 
-            if (posudba == null)
+            if (lbUcenik.SelectedIndex < 0 || lbKnjiga.SelectedIndex < 0)
             {
-                posudba = new Posudba();
+                MessageBox.Show("Morate odabrati učenika i knjigu");
             }
 
-            posudba.Ucenik = (Ucenik)lbUcenik.SelectedItem;
-            posudba.Knjiga = (Knjiga)lbKnjiga.SelectedItem;
-            posudba.DatumPosudbe = dateTimePicker1.Value;
-            posudba.BrojDana = int.Parse(txtBroj.Text);
+            else
+            {
 
-            DialogResult = DialogResult.OK;
+                if (posudba == null)
+                {
+                    posudba = new Posudba();
+                }
 
+                posudba.Ucenik = (Ucenik)lbUcenik.SelectedItem;
+                posudba.Knjiga = (Knjiga)lbKnjiga.SelectedItem;
+                posudba.DatumPosudbe = dateTimePicker1.Value;
+                posudba.BrojDana = int.Parse(txtBroj.Text);
+
+                DialogResult = DialogResult.OK;
+            
+            }
         }
     }
 }

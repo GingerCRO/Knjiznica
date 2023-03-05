@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace Knjiznica
@@ -38,9 +35,9 @@ namespace Knjiznica
 
         }
 
-        private string datUcenici = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datUcenici.txt";
-        private string datKnjige = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datKnjige.txt";
-        private string datPosudbe = @"C:\Users\ucenik02\Documents\FilipJuracic_4e\NOP\Knjiznica\datPosudbe.txt";
+        private string datUcenici = Environment.CurrentDirectory + @"datUcenici.txt";
+        private string datKnjige = Environment.CurrentDirectory + @"datKnjige.txt";
+        private string datPosudbe = Environment.CurrentDirectory + @"datPosudbe.txt";
 
         private List<Ucenik> UcitajUcenike()
         {

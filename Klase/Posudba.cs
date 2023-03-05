@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Knjiznica
 {
@@ -24,7 +20,9 @@ namespace Knjiznica
 
         public override string ToString()
         {
+
             return DatumPosudbe.ToShortDateString() + " - " + DatumVracanja.ToShortDateString();
+        
         }
 
         public int CompareTo(Posudba other)
