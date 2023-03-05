@@ -133,6 +133,9 @@ namespace Knjiznica
                             }
                             );
 
+                        //p.Ucenik = Ucenici.Find(u => u.OIB == polja[0]);
+                        //p.Knjiga = Knjige.Find(k => k.ISBN == polja[1]);
+
                         p.DatumPosudbe = DateTime.Parse(polja[2]);
                         p.BrojDana = int.Parse(polja[3]);
 
